@@ -29,7 +29,7 @@ async function render() {
       <div class="carousel-item ${index === 0 ? "active" : ""}">
           <img src="${
             recipe.image
-          }" class="bd-placeholder-img bd-placeholder-img-md d-block w-900" width="60%" height="400" alt="">
+          }" class="bd-placeholder-img bd-placeholder-img-lg d-block w-700" width="100%" height="400" alt="">
       </div>`;
   }
   slides += `</div>`;

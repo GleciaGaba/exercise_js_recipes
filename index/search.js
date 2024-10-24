@@ -1,11 +1,9 @@
-const form = document.getElementsByTagName("form");
 const button = document.querySelector(".btn");
 
 const inputFn = () => {
   let searchData = document.querySelector("#input").value;
   console.log(searchData);
   if (!searchData) {
-    // alert("Recipe not found.");
     return;
   }
 
