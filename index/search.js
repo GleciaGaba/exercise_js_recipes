@@ -8,8 +8,6 @@ async function filter(input) {
       `https://api.spoonacular.com/food/search?query=${input}&apiKey=43b1af8bb4924e2389e95aebca1724cb`
     );
     const data = await response.json();
-    //console.log(data);
-
     const ingredients = data?.searchResults[0].results;
 
     console.log("ingredients", ingredients);
@@ -41,7 +39,7 @@ async function filter(input) {
 }
 
 const inputFn = () => {
-  let searchData = document.querySelector("#input").value;
+  const searchData = document.querySelector("#input").value.trim();
 
   console.log(searchData);
   if (!searchData) {
@@ -51,4 +49,8 @@ const inputFn = () => {
   filter(searchData);
 };
 
-document.addEventListener("load", filter());
+// Corriger l'événement pour le chargement
+document.addEventListener("DOMContentLoaded", () => filter("chocolate"));
+
+// Associer le bouton à l'action de recherche
+button.addEventListener("click", inputFn);
