@@ -1,15 +1,5 @@
 const button = document.querySelector(".btn");
 
-const inputFn = () => {
-  let searchData = document.querySelector("#input").value;
-  console.log(searchData);
-  if (!searchData) {
-    return;
-  }
-
-  filter(searchData);
-};
-
 async function filter(input) {
   console.log(input);
 
@@ -50,16 +40,14 @@ async function filter(input) {
   }
 }
 
-//button.addEventListener("submit", (event) => {
-//  event.preventDefault();
-//  let searchData = document.querySelector("#input").value;
-//  console.log(searchData);
-//  if (!searchData) {
-//    alert("Recipe not found.");
-//    return;
-//  }
-//
-//  filter(searchData);
-//});
+const inputFn = () => {
+  let searchData = document.querySelector("#input").value;
+  console.log(searchData);
+  if (!searchData) {
+    return;
+  }
+
+  filter(searchData);
+};
 
 document.addEventListener("load", filter());
