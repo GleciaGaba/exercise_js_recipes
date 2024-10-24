@@ -7,7 +7,7 @@ async function render() {
   let cards = "";
   let slides = "";
 
-  // Generating cards for each recipe
+  // Cards for each recipe
   for (const recipe of recipes) {
     cards += `
       <div class="col">
@@ -22,7 +22,7 @@ async function render() {
       </div>`;
   }
 
-  // Generating carousel items
+  // Carousel items
   slides += `<div class="carousel-inner">`;
   for (const [index, recipe] of recipes.entries()) {
     slides += `
@@ -34,7 +34,7 @@ async function render() {
   }
   slides += `</div>`;
 
-  // Full carousel structure
+  // Full carousel
   slides = `
     <div id="carouselExampleAutoplaying" class="carousel slide"  data-bs-ride="carousel">
       ${slides}
@@ -48,7 +48,6 @@ async function render() {
       </button>
     </div>`;
 
-  // Inserting the HTML into the document
   let div = document.querySelector("#cards");
   let carousel = document.querySelector("#carouselExampleAutoplaying");
   div.innerHTML = cards;
