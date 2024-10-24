@@ -15,6 +15,7 @@ async function filter(input) {
     console.log("ingredients", ingredients);
 
     if (!ingredients || ingredients.length === 0) {
+      filter("chocolate");
       return;
     }
 
@@ -41,6 +42,7 @@ async function filter(input) {
 
 const inputFn = () => {
   let searchData = document.querySelector("#input").value;
+
   console.log(searchData);
   if (!searchData) {
     return;
