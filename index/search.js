@@ -15,7 +15,6 @@ async function filter(input) {
     console.log("ingredients", ingredients);
 
     if (!ingredients || ingredients.length === 0) {
-      //alert("No recipes found.");
       return;
     }
 
